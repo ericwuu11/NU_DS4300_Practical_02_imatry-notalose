@@ -7,3 +7,5 @@ This project involves building a local Retrieval-Augmented Generation (RAG) syst
 - Query Processing: Accept user queries and retrieve relevant context.
 - LLM Response Generation: Pass retrieved context into a locally running LLM for response generation.
 - Performance Analysis: Compare different configurations and evaluate retrieval accuracy, speed, and efficiency.
+
+# Execution
