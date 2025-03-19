@@ -124,7 +124,7 @@ def generate_embeddings():
         similarity_matrix = cosine_similarity(embeddings)
         avg_similarity = np.mean(similarity_matrix)
 
-        # Store embedding results
+        # Storing embedding results
         embedding_results[model_name] = {
             "Embedding Shape": embeddings.shape,
             "Computation Time (s)": round(end_time - start_time, 2),
