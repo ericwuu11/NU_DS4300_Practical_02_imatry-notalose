@@ -3,7 +3,7 @@ This project involves building a local Retrieval-Augmented Generation (RAG) syst
 
 # Key Features
 - Document Ingestion & Indexing: Collect and process course notes from team members.
-- Vector Database: Store indexed embeddings in a vector database (Redis, Chroma, and another of your choice).
+- Vector Database: Store indexed embeddings in a vector database.
 - Query Processing: Accept user queries and retrieve relevant context.
 - LLM Response Generation: Pass retrieved context into a locally running LLM for response generation.
 - Performance Analysis: Compare different configurations and evaluate retrieval accuracy, speed, and efficiency.
