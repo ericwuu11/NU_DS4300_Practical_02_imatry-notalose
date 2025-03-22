@@ -1,0 +1,24 @@
+Question: What is the purpose of data replication?
+Response:
+Data replication in Redis and OLAMMA context refers to the process of creating multiple copies of data across different nodes or servers. This is done to ensure that data remains available and accessible even if one or more nodes fail, which improves the overall availability and performance of the system. In the case of vector databases, replication allows for faster search results by distributing workloads across multiple nodes and reducing latency. Additionally, it provides fault tolerance and scalability, allowing the system to handle large amounts of data and traffic.
+==================================================
+Question: Explain key-value databases with examples.
+Response:
+Key-value databases, also known as hash tables or associative arrays, are a type of database that store data in the form of key-value pairs. Each key is associated with a single value, and the pair can be accessed using the key. Here's an example:
+
+Suppose you have a simple web application that allows users to sign up for an account by providing their name, email address, and password. When a user signs up, you would store their information in a key-value database using the user's email address as the key and a hash of their password as the value.
+
+Another example is a caching system where you want to cache frequently accessed data such as a user's profile picture. You could use a key-value database to store the image URL under a unique key and serve the image using that key when requested.
+
+Key-value databases are useful for storing simple data structures, such as user profiles or caching data, but they may not be suitable for more complex queries that require more advanced querying capabilities. For example, if you wanted to find all users who have a certain attribute, such as a specific email domain, you would need to use a different type of database like a relational database with SQL.
+==================================================
+Question: How does the AVL tree maintain balance?
+Response:
+AVL (Adelson-Velsky and Landis) trees are a type of balanced binary search tree that maintains balance by performing rotations on nodes when necessary. The balance factor of each node in an AVL tree is calculated as the height of the right subtree minus the height of the left subtree.
+
+When the balance factor of a node becomes 2 or -2, an rotation is performed to restore balance. If the balance factor of the parent node after the rotation is still not balanced, a second rotation may be necessary on the grandparent node.
+
+There are two types of rotations in AVL trees: single-rotation and double-rotation. A single-rotation involves swapping the right child of one node with the left child of another node, while a double-rotation involves performing two single-rotations in sequence.
+
+In general, AVL trees provide efficient search and insertion operations, as well as maintaining balance to ensure that the tree remains efficient even when it is modified.
+==================================================

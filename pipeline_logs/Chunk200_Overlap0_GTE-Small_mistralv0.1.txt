@@ -1,0 +1,27 @@
+Question: What is the purpose of data replication?
+Response:
+Data replication is a technique used to maintain multiple copies of the same data across different servers or nodes in a distributed system. The purpose of data replication is to ensure that data is available and accessible even if one or more of the servers fail, reducing the risk of data loss or downtime. Additionally, it can improve performance by allowing requests to be processed more quickly by accessing data from a server that is closer to the user or application. Replication can also help distribute workloads across multiple nodes, further improving performance and availability.
+==================================================
+Question: Explain key-value databases with examples.
+Response:
+Key-Value databases are a type of database that stores data using key-value pairs. Each key is associated with a value, and the key is used to retrieve the corresponding value. Key-value databases are simple to use and can be used for a variety of purposes, such as storing user preferences or caching frequently accessed data.
+
+One example of a key-value database is Redis. Redis is an in-memory key-value database that is commonly used for caching frequently accessed data and for real-time analytics. Redis also supports more advanced features, such as sorting and hashing, which can be useful for specific use cases.
+
+Another example of a key-value database is Amazon DynamoDB. DynamoDB is a fully managed NoSQL key-value database that is designed to be highly scalable and resilient. It supports a wide range of data models, including key-value pairs, and can be used for a variety of applications, such as storing user preferences and caching frequently accessed data.
+
+Overall, key-value databases are a simple and efficient way to store and retrieve data. They are commonly used in a variety of applications, from web development to real-time analytics.
+==================================================
+Question: How does the AVL tree maintain balance?
+Response:
+
+AVL (Adelson-Velsky and Landis) trees are a type of self-balancing binary search tree data structure. They maintain balance by adjusting the heights of nodes in the tree after an insertion, deletion, or update operation.
+
+The height of a node in the AVL tree is defined as the maximum distance from that node to any leaf node. The height of the root node is always 0.
+
+After an insertion or deletion operation, the tree may become unbalanced if the heights of the nodes on the right and left sides of a node differ by more than one. To maintain balance, the tree will perform a rotation operation, which involves swapping the right subtree of the parent node with its own left subtree. This operation is repeated until the tree becomes balanced again.
+
+Additionally, after an update operation, the tree may become unbalanced if the heights of the nodes on the right and left sides of a node differ by more than one. In this case, the tree will perform a single rotation or double rotation operation to restore balance.
+
+Overall, the AVL tree maintains balance by performing rotation operations after insertion, deletion, or update operations to ensure that the heights of nodes on the right and left sides of each node differ by at most one.
+==================================================

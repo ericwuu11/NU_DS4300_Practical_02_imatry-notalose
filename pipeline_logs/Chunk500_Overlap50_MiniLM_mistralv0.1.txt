@@ -1,0 +1,31 @@
+Question: What is the purpose of data replication?
+Response:
+
+Data replication has multiple purposes in various contexts, including in Redis and vector databases for similarity search. In Redis, data replication ensures high availability and fault tolerance by maintaining multiple copies of a dataset across different nodes in the cluster. This allows Redis to continue serving read and write requests even if one or more nodes fail.
+
+Similarly, in vector databases like Ollama, data replication is used for scaling and performance improvement. By distributing the embedding space across multiple machines or clusters, vector databases can achieve faster search times and handle larger datasets. This is particularly important when generating embeddings for RAG (Referential Anchor Graph) applications, where high-dimensional vectors need to be processed efficiently to provide accurate similarity scores between entities.
+
+Therefore, data replication plays a crucial role in ensuring the reliability, scalability, and performance of Redis and vector databases used for similarity search and RAG applications.
+==================================================
+Question: Explain key-value databases with examples.
+Response:
+
+Key-Value Databases are a type of NoSQL database that stores data as key-value pairs, where each key is unique and corresponds to a piece of data or information. This means that you can retrieve the value associated with a given key using a simple query language or API. Some popular key-value databases include Redis, Riak, and Varnish.
+
+In Redis, key-value pairs are stored in memory for fast access. For example, you could use a key-value database to store user information such as their name, email address, and password hashes. You could then retrieve this information using simple queries like "get user by id" or "lookup user by name".
+
+Another example of a key-value database is the use case for caching data in a web application. For instance, you might store frequently accessed data such as API responses or database query results in a key-value database to improve performance and reduce the load on your backend systems.
+
+Overall, key-value databases are well suited for situations where fast access to simple data structures is required. They provide a highly scalable and efficient way to store and retrieve data in real-time.
+==================================================
+Question: How does the AVL tree maintain balance?
+Response:
+
+AVL trees are self-balancing binary search trees that maintain a balance between their left and right subtrees by performing rotations when necessary. The height of each node in the tree is calculated as the maximum depth of its subtree plus one, and the overall balance of the tree is maintained by keeping the heights of its left and right subtrees within a certain range, typically ±1 or ±2.
+
+When a new element is inserted into the tree, it is first inserted at the root. If the height of the root becomes too large or small, the tree performs a rotation to maintain balance. The specific rotation performed depends on the direction of the insertion, and can involve either rotating around the root node or one of its children nodes.
+
+The height of each node in the tree is calculated by traversing from the leaf nodes up to the root, counting the depth of each node along the way. If the heights of the left and right subtrees differ by more than ±1 or ±2, the tree performs a rotation to adjust the balance. The rotation can involve either swapping the subtrees or performing a single-node rotation.
+
+Overall, the AVL tree is designed to maintain a balanced structure that allows for efficient search and insertion operations, while also ensuring that the tree remains stable even with frequent changes to its content.
+==================================================

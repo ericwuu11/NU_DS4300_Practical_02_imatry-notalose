@@ -1,0 +1,30 @@
+Question: What is the purpose of data replication?
+Response:
+
+Data replication is used in Redis to maintain multiple copies of the same data across different nodes or servers. The purpose of this is to ensure that if one node fails, the data can still be accessed from another node, thereby improving the reliability and availability of the system. Additionally, it can also help distribute workloads and improve performance by allowing read and write operations to be performed on multiple copies of the same data simultaneously.
+==================================================
+Question: Explain key-value databases with examples.
+Response:
+A key-value database is a type of NoSQL database that stores data as a collection of key-value pairs, where each key uniquely identifies a piece of data and its corresponding value is the actual information being stored. The keys are typically strings or hashes, while the values can be anything from simple text to complex structures like lists or dictionaries.
+
+Here are some examples of key-value databases:
+
+1. Redis: Redis is an open-source in-memory key-value database that stores data as key-value pairs and supports a wide range of data types, including strings, hashes, lists, sets, and sorted sets. It can be used for caching, storing frequently accessed data, and performing real-time analytics.
+2. Memcached: Memcached is another open-source in-memory key-value database that is designed to work as an object cache. It stores data in memory and provides fast access times for frequently requested data, making it suitable for use cases such as website caching, ad serving, and content delivery networks.
+3. Varnish Cache: Varnish Cache is a popular open-source web application accelerator that uses key-value databases to store frequently accessed data and improve website performance. It can be used for caching static assets, storing authentication tokens, and more.
+4. Keybase: Keybase is a secure, decentralized file storage and key management service that uses key-value databases to store encrypted files. It supports encryption at rest and in transit, making it suitable for use cases such as cloud storage, code signing, and secure messaging.
+
+In summary, key-value databases are useful for storing and accessing frequently accessed data quickly, without the need for complex schema design or database management systems. They can be used for a variety of applications, including caching, storing authentication tokens, and performing real-time analytics.
+==================================================
+Question: How does the AVL tree maintain balance?
+Response:
+AVL trees maintain balance by adjusting the height of nodes whenever a node is inserted, deleted or updated. The height of each node in an AVL tree represents the maximum depth of subtrees rooted at that node. When a node is inserted, deleted, or updated, the tree must be rebalanced to ensure that the height difference between adjacent nodes does not exceed a certain threshold (usually 1).
+
+To maintain balance, the tree uses the following operations:
+
+1. Single rotation: If a node has a height difference of 2, it can be balanced by performing a single rotation. For example, if a left child has a height difference of 1, the parent node can rotate to the right and its left child will become the new root. This operation ensures that the height difference between adjacent nodes does not exceed 1.
+2. Double rotation: If a node has a height difference of 2 and its opposite sibling also has a height difference of 2, it can be balanced by performing a double rotation. For example, if both left children have a height difference of 1, the parent node can rotate to the right, then perform another rotation on its right child to make it the new root. This operation ensures that the tree remains balanced after two consecutive insertions or deletions.
+3. Height update: The height of each node in an AVL tree is updated whenever a node is inserted, deleted, or updated. When a node is updated, its height is recalculated based on the heights of its children. This operation ensures that the tree remains balanced and all nodes have consistent heights.
+
+By using these operations, AVL trees can maintain balance and ensure that the tree is always in a state where each node has consistent heights and the height difference between adjacent nodes does not exceed a certain threshold.
+==================================================

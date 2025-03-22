@@ -1,0 +1,30 @@
+Question: What is the purpose of data replication?
+Response:
+Data replication in Redis refers to the process of copying data from one instance of Redis to another, so that multiple instances are synchronized and have identical data. The purpose of data replication is to improve the performance and reliability of Redis databases. By having multiple copies of the same data, Redis can ensure high availability and fault tolerance. If one instance fails or becomes unresponsive, the other instances can take over and continue serving read and write requests. Additionally, by replicating data across multiple instances, Redis can achieve better performance by using a technique called sharding, which distributes data across multiple nodes for faster access and processing.
+==================================================
+Question: Explain key-value databases with examples.
+Response:
+Key-value databases, also known as key-value stores or key-value pairs, are a type of database that store data in the form of key-value pairs. In this format, each piece of data is associated with a unique key and has a corresponding value.
+
+For example, let's say you want to store information about your employees. You could use a key-value database to store each employee's name as the key and their salary as the value. So, one entry might look like this:
+```javascript
+{
+  "Alice": 50000,
+  "Bob": 60000,
+  "Charlie": 45000
+}
+```
+In this example, "Alice" is the key and "50000" is the value. You can use any string as a key, but it's best to choose one that's descriptive and easy to remember. The value can be any type of data, such as a number or a string.
+
+Key-value databases are often used to store small amounts of data in memory, where speed is important. They are commonly used for caching, session storage, and storing configuration settings. Some popular key-value databases include Redis and Riak.
+==================================================
+Question: How does the AVL tree maintain balance?
+Response:
+AVL trees are a type of self-balancing binary search tree that automatically maintain balance by adjusting the height of each node in the tree. The height of each node is calculated by counting the number of nodes between that node and its leaf nodes. When an insertion or deletion operation occurs, the height of affected nodes may change.
+
+When a new node is inserted into the AVL tree, its parent node's height changes. If the parent node has more than one child node, its height will not change. However, if the parent node only has one child node, it will become unbalanced and will need to be rotated to maintain balance.
+
+Similarly, when a leaf node is deleted from an AVL tree, the height of its parent node changes. If the parent node has more than one child node, its height may not change. However, if the parent node only has one child node, it will become unbalanced and will need to be rotated to maintain balance.
+
+During rotation, the height of affected nodes is updated and the tree is rebalanced. The process repeats until the tree is fully balanced again. This ensures that the AVL tree always maintains a balance between its left and right subtrees.
+==================================================

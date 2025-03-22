@@ -1,0 +1,27 @@
+Question: What is the purpose of data replication?
+Response:
+Data replication is the process of copying and maintaining multiple copies of a dataset across different nodes or systems. In the context of Redis, replication ensures high availability and fault tolerance by allowing for data to be stored in multiple locations, so that if one node fails, other nodes can take over its responsibilities without disruption of service. This is especially important in production environments where downtime can be costly.
+
+In the context of vector databases, replication allows for faster search times and better scalability by distributing data across multiple nodes. Each node can then contribute to similarity search operations, reducing the overall load on any one node. This also allows for more efficient query processing and faster response times.
+
+When it comes to Ollama, data replication is useful for ensuring that embeddings are available for use in RAG applications across multiple nodes or systems. This can help improve the performance and scalability of the application by reducing the load on any one node and allowing for more efficient query processing.
+==================================================
+Question: Explain key-value databases with examples.
+Response:
+Key-value databases are a type of NoSQL database that store data as key-value pairs, where the key is used to retrieve the corresponding value. These databases are designed to handle large amounts of unstructured or semi-structured data and provide fast access times for read and write operations.
+
+One example of a key-value database is Redis, which is an open-source, in-memory key-value store. Redis is used as a data store for caching, storing session data, and performing real-time analytics. It supports a variety of data types, including strings, hashes, lists, sets, and sorted sets.
+
+Another example of a key-value database is Amazon DynamoDB, which is a fully managed NoSQL database service provided by AWS. DynamoDB is designed for fast and predictable performance with seamless scalability, making it suitable for use cases such as real-time data processing, mobile and web applications, and Internet of Things (IoT) devices.
+
+Key-value databases are often used in combination with other database technologies, such as relational databases, to provide a more comprehensive solution for storing and retrieving data. For example, Redis can be used as a cache for frequently accessed data that is stored in a relational database, providing faster access times and reducing the load on the database.
+==================================================
+Question: How does the AVL tree maintain balance?
+Response:
+
+AVL trees maintain balance by adjusting the heights of nodes whenever a node is inserted or deleted. When a new key-value pair is added to the tree, it is inserted at the root of the tree and then propagated downwards in a similar way as when adding elements to a binary search tree. However, instead of just following the left and right links of the node being inserted, the AVL tree also performs a height check on each node's siblings and adjusts the heights accordingly.
+
+If one side of a sibling pair has a larger height difference than the other, it is considered "unbalanced." In this case, the AVL tree will perform a series of restructuring operations to balance out the tree. These operations involve rotating nodes and updating their heights. The exact algorithm for balancing an AVL tree can be complex but generally involves performing rotations and adjusting heights until the tree is balanced.
+
+This process is repeated whenever any node in the tree is inserted or deleted, ensuring that the tree remains balanced at all times. By maintaining balance, the AVL tree ensures efficient access to data in the tree, as well as fast search and insertion operations.
+==================================================

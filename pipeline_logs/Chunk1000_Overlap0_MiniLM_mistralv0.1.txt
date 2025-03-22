@@ -1,0 +1,31 @@
+Question: What is the purpose of data replication?
+Response:
+
+In Redis, data replication refers to the process of maintaining multiple identical copies of a database across different nodes or servers. The purpose of data replication is to improve the performance and reliability of the system by allowing for faster read and write operations and providing fault tolerance in case one or more nodes fail. With data replication, Redis can scale horizontally to handle increased traffic and workload, while ensuring that data remains consistent across all nodes.
+
+In the context of vector databases, data replication is not typically used as it may introduce inconsistencies in the embeddings due to differences in processing time between nodes. Instead, distributed training techniques are used to generate embeddings that can be stored and queried on multiple nodes simultaneously. This allows for faster query times and better scalability for large-scale vector databases.
+
+Overall, data replication is used in Redis to improve the performance and reliability of the system, while distributed training techniques are used in vector databases to allow for faster and more efficient similarity search.
+==================================================
+Question: Explain key-value databases with examples.
+Response:
+A key-value database is a type of NoSQL database that stores data as key-value pairs. The key is used to identify and access the corresponding value. It's an extremely simple yet powerful data model, which makes it suitable for a wide range of applications.
+
+Examples of key-value databases include:
+
+1. Redis - A popular in-memory key-value database that provides fast access times. It's commonly used as a cache or database store to speed up application performance by caching frequently accessed data.
+2. Riak - Another distributed key-value database that's designed for high availability and fault tolerance. It's often used in high-traffic applications where low latency is critical.
+3. MongoDB - A document-oriented NoSQL database that also supports key-value pairs. While it's primarily used as a document store, it can be used for simple key-value lookups as well.
+4. Cassandra - A distributed key-value database designed for high scalability and performance. It's often used in big data applications where fast data retrieval is essential.
+==================================================
+Question: How does the AVL tree maintain balance?
+Response:
+
+AVL trees are self-balancing binary search trees that use a balance factor to ensure that the height of the left and right subtrees of each node differ by at most one. The balance factor is calculated as the difference between the heights of the left and right subtrees of the node, with positive values indicating that the tree is skewed to the left and negative values indicating that the tree is skewed to the right.
+
+When a new key-value pair is inserted into the AVL tree, the tree may become unbalanced. To maintain balance, the tree uses a series of rotations (single rotations or double rotations) to rebalance the tree by adjusting the height of the subtrees and redistributing the keys and values.
+
+The specific rotation used depends on the direction of the insertion, with single rotations being used for left and right insertions, and double rotations being used for right-left or left-right insertions. The algorithm also adjusts the balance factor after each rotation to ensure that the tree remains balanced.
+
+Overall, the AVL tree maintains balance by using a combination of height calculations and rotations to adjust the structure of the tree as new key-value pairs are inserted.
+==================================================

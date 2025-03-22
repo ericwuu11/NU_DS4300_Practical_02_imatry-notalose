@@ -1,0 +1,26 @@
+Question: What is the purpose of data replication?
+Response:
+Data replication in Redis is used to maintain multiple copies of the same data across different nodes or servers. This is useful for improving performance, increasing availability, and providing fault tolerance. By having multiple copies of the data, Redis can reduce the response time for reads and writes, as clients can access data from any node they are connected to. Additionally, if a node fails, other nodes with replicated data can still serve requests, ensuring that the system remains available. Data replication is especially important for mission-critical applications where downtime or data loss could have significant consequences.
+==================================================
+Question: Explain key-value databases with examples.
+Response:
+Key-Value Databases are a type of NoSQL database that stores data as a set of key-value pairs. Each record is stored with a unique key, which is used to retrieve the value associated with it. The values can be anything from simple strings to complex data structures like objects and arrays.
+
+One popular example of a key-value database is Redis, an open-source in-memory key-value store that is used for fast data retrieval and caching. It supports various data types including strings, lists, hashes, sets, sorted sets, and more, and can be used for various use cases such as storing session data, cache, and message queues.
+
+Another example of a key-value database is Amazon DynamoDB, which is a highly scalable and fast NoSQL database service that provides seamless performance with low latency. It supports various data types including strings, numbers, booleans, and binary data, and can be used for storing and retrieving data in real-time.
+
+Overall, key-value databases are simple, easy to use, and scalable, making them a popular choice for applications that require fast data retrieval and caching.
+==================================================
+Question: How does the AVL tree maintain balance?
+Response:
+
+An AVL tree is a self-balancing binary search tree that uses height information to ensure balance between its nodes. Here's how it works:
+
+1. Each node in an AVL tree has a key, a value, and a balance factor (bf), which represents the height of the left subtree minus the height of the right subtree.
+2. When a new node is inserted into the tree, its balance factor is calculated based on the balance factors of its parent nodes. If the balance factor exceeds a certain threshold (usually +1 or -1), the tree needs to be rebalanced.
+3. The rebalancing process involves adjusting the height of the nodes and their balance factors until the tree returns to a balanced state. This is done by performing one or more rotations, which are operations that swap subtrees while preserving their order.
+4. Rotations can be performed in two ways: single rotation (left or right) or double rotation (left-right or right-left). The choice of rotation depends on the balance factors of the nodes involved and the direction of the rotation.
+5. After a rotation, the balance factor of each node is recalculated based on its new subtree heights. If the balance factor still exceeds the threshold, the process is repeated until the tree returns to a balanced state.
+6. This process ensures that the AVL tree maintains balance and allows for efficient search, insertion, and deletion of nodes.
+==================================================

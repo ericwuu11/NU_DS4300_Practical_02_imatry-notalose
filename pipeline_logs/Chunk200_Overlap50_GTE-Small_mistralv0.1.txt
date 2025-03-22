@@ -1,0 +1,32 @@
+Question: What is the purpose of data replication?
+Response:
+Data replication is a technique used to create multiple copies of data across different systems or locations. It serves several purposes, including:
+
+1. High availability: Replicating data ensures that it is always available even if one copy is lost due to hardware failure or other issues. This makes the system more resilient and less prone to downtime.
+2. Scalability: By distributing data across multiple systems, you can scale the storage capacity of your database without a single point of failure. You can add new systems as needed, and the replication process will ensure that all copies are kept up-to-date.
+3. Fault tolerance: If one replica goes down, the other replicas can take over and continue to provide access to the data. This ensures that your system remains fault-tolerant even in the face of hardware failures or other issues.
+4. Load balancing: Replicating data allows you to distribute the load across multiple systems, which can improve performance by reducing the load on any one system. This can be especially useful in situations where there is a sudden spike in traffic or usage.
+==================================================
+Question: Explain key-value databases with examples.
+Response:
+A key-value database is a type of database that stores data in the form of key-value pairs, where each pair consists of a unique identifier (key) and its corresponding value. The key acts as an index, allowing for fast access to the value.
+
+Some examples of key-value databases include:
+
+1. Redis - a popular open-source in-memory data structure store that supports key-value data storage and retrieval.
+2. Cassandra - a distributed NoSQL database management system that uses column families to group together related rows, which can be accessed with unique keys.
+3. MongoDB - a document-oriented database that stores data as JSON documents, where the fields act as keys and their values act as values.
+4. Memcached - an in-memory caching system that uses key-value pairs to store and retrieve data quickly.
+5. Amazon DynamoDB - a fully managed NoSQL database service offered by AWS that supports key-value data storage and retrieval, as well as other types of data models.
+==================================================
+Question: How does the AVL tree maintain balance?
+Response:
+
+AVL trees are self-balancing binary search trees that use a simple and efficient algorithm to maintain balance between their nodes. Specifically, an AVL tree uses the height of each node as a measure of its importance in the overall structure of the tree. The algorithm ensures that the height difference between any two adjacent nodes is not more than one, which helps to keep the tree balanced.
+
+The algorithm works by updating the height of each node whenever it is modified or deleted from the tree. When a node is inserted, its height is calculated as 1 plus the maximum height of its parent's children. If the insertion causes the height of the parent node to change, the algorithm checks whether the new node should be rotated up or down based on the difference in heights between the two nodes.
+
+When a node is deleted, its height is subtracted from the height of its parent, and the parent's height is updated accordingly. If the deletion causes the height of the parent node to change, the algorithm checks whether any of the parent's children have been affected and adjusts the height of the affected nodes as needed.
+
+Overall, the AVL tree algorithm provides a simple and efficient way to maintain balance in a binary search tree, which is crucial for ensuring that data can be accessed quickly and efficiently in many applications.
+==================================================

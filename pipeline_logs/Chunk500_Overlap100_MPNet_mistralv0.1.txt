@@ -1,0 +1,20 @@
+Question: What is the purpose of data replication?
+Response:
+Data replication is a technique used to ensure that multiple copies of the same data are stored across different nodes or servers in a distributed system. The primary purpose of data replication is to provide redundancy and increase the availability of the data, so that if one node fails, another node can take over without interruption.
+
+In the context of Redis, data replication allows multiple Redis instances to be configured with identical data, so that queries can be directed to any of the instances and still get an accurate response. This provides improved performance and scalability by allowing read requests to be distributed across multiple nodes, and also improves fault tolerance by ensuring that the data is always available even if one node goes down.
+
+In the context of vector databases, data replication allows multiple copies of the embeddings to be stored in different locations, so that similarity search queries can be directed to any of the instances and still get an accurate response. This provides improved performance and scalability by allowing searches to be distributed across multiple nodes, and also improves fault tolerance by ensuring that the embeddings are always available even if one node goes down.
+
+In the context of Ollama's RAG applications, data replication allows multiple instances of the model to be trained on the same data, so that the resulting models can be used interchangeably and the computational load can be distributed across multiple nodes. This provides improved performance and scalability by allowing computations to be parallelized across multiple nodes, and also improves fault tolerance by ensuring that the models are always available even if one node goes down.
+==================================================
+Question: Explain key-value databases with examples.
+Response:
+Key-value databases are simple data stores where each item is associated with a unique identifier called the "key". When a user retrieves an item from the database, they provide the key and the system returns the corresponding value. Some common examples of key-value databases include Redis and Riak. These databases are often used to store and retrieve small amounts of data quickly, making them well suited for caching and storing session data. They can also be used to implement simple search engines, where users can look up items based on specific keywords.
+==================================================
+Question: How does the AVL tree maintain balance?
+Response:
+AVL trees are a self-balancing binary search tree data structure that maintains balance by adjusting heights of nodes. When a node is inserted or deleted, its parent's height may change. If the difference between the heights of both parents becomes 2, the AVL tree needs to be balanced. This is done by performing a series of operations on the affected nodes and their children, until balance is restored. The operations include rotations (left or right) and height updates. The height of a node in an AVL tree is determined by counting the number of edges between the node and its root.
+
+The balancing algorithm maintains a constant time complexity of O(log n), where n is the number of nodes in the tree. This makes AVL trees well-suited for scenarios that require fast and efficient searching, insertion, and deletion of elements.
+==================================================

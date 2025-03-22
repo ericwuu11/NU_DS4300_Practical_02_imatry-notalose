@@ -1,0 +1,39 @@
+Question: What is the purpose of data replication?
+Response:
+
+Data replication is used to maintain multiple copies of data on different servers or in different locations, which helps improve performance and reliability.
+
+In the context of Redis, data replication is used to store and manage key-value pairs across multiple nodes in a cluster, allowing for faster retrieval of data, higher availability, and increased fault tolerance. Redis supports two types of data replication: master-slave and multi-master. In master-slave replication, there is one primary node that receives write commands from clients and broadcasts them to all slave nodes, which store and maintain a copy of the database. In multi-master replication, all nodes have equal read and write capabilities, allowing for higher performance and scalability.
+
+In the context of vector databases, data replication is used to distribute high-dimensional embeddings across multiple nodes, allowing for faster similarity search and improved performance. This can be achieved through techniques such as sharding or partitioning, where the embedding space is divided into smaller regions and each region is stored on a separate node.
+
+In the context of Ollama, data replication is used to store generated embeddings across multiple nodes, allowing for faster retrieval and processing of information. This can be achieved through techniques such as sharding or partitioning, where the embeddings space is divided into smaller regions and each region is stored on a separate node.
+==================================================
+Question: Explain key-value databases with examples.
+Response:
+Key-value databases are a type of database that store data as key-value pairs, where the key is a unique identifier for a piece of data and the value is the data itself. This means that each item in the database has a unique identifier and can be accessed using that identifier.
+
+Here's an example to help illustrate how key-value databases work:
+
+Imagine you have a simple address book where you store the names and phone numbers of your contacts. In this case, the key could be the name of each contact and the value could be their phone number. So for each contact in the address book, you would have a key-value pair like this:
+```javascript
+{
+  "John Smith": "+1234567890",
+  "Jane Doe": "+2345678901"
+}
+```
+When you want to look up the phone number for a specific contact, you would use their name as the key and retrieve their phone number from the value. This way, you can quickly and easily access the information you need without having to remember the exact order of the items in the address book.
+
+Key-value databases are commonly used to store data that doesn't have a natural ordering or structure, such as user preferences, session data, and configuration settings. They are also used to cache frequently accessed data to improve performance. In general, key-value databases are simple, fast, and flexible, making them well-suited for a wide range of use cases.
+==================================================
+Question: How does the AVL tree maintain balance?
+Response:
+
+AVL trees are self-balancing binary search trees that automatically maintain a balanced state by adjusting their heights after insertions, deletions, and rotations. The balance factor of each node in an AVL tree is defined as the difference between the height of the right child and the left child.
+
+When a new element is inserted into an AVL tree, the algorithm computes the new height of the root node and its children. If the insertion causes the heights of the left and right children to differ by more than one, the algorithm performs a rotation or series of rotations to maintain balance. For example, if the left child has a height greater than the right child, the algorithm performs a single rotation to swap the left and right children. If the left child is still taller after the rotation, the algorithm performs another rotation on the new right child.
+
+Similarly, when an element is deleted from an AVL tree, the algorithm computes the new height of the root node and its children. If the deletion causes the heights of the left and right children to differ by more than one, the algorithm performs a series of rotations to restore balance. The specific rotations used depend on which child was deleted and whether the left or right child became taller after the deletion.
+
+In summary, the AVL tree maintains balance by adjusting its heights after insertions and deletions and performing rotations as necessary to ensure that the difference between the height of the left and right children is no more than one.
+==================================================

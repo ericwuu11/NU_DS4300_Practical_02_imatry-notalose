@@ -1,0 +1,25 @@
+Question: What is the purpose of data replication?
+Response:
+Data replication in Redis refers to maintaining multiple copies of the same data across different nodes or servers in a distributed system. The main purpose of data replication is to improve performance, scalability, and availability by allowing for read-only access to data from multiple nodes. This ensures that queries can be executed more quickly and efficiently, as they can be handled by any node with a copy of the required data, rather than being dependent on a single node. Additionally, data replication provides a level of fault tolerance and protection against data loss or corruption, as the data is stored in multiple locations and any one node or server can fail without causing data loss.
+==================================================
+Question: Explain key-value databases with examples.
+Response:
+
+Key-Value Databases are a type of NoSQL database that stores data as key-value pairs, where the key is a unique identifier and the value is the actual data stored in the database. The data can be of any type, including strings, numbers, arrays, and objects. Key-Value databases are highly scalable and can handle large amounts of data with fast read and write performance. They are also easy to use and flexible, making them a popular choice for many applications.
+
+Examples of Key-Value Databases:
+
+1. Redis - It is an open-source, in-memory key-value database that supports various data structures such as strings, hashes, lists, sets, and sorted sets. It also supports features like pipelining, transactions, and Lua scripting.
+2. LevelDB - It is a fast, scalable key-value store written in C++ and designed to handle large amounts of data. It is often used as the underlying storage engine for other databases and applications.
+3. Riak - It is a distributed key-value database that supports multi-master replication and automatic sharding. It also provides features like ACID transactions, distributed locking, and support for multiple data types.
+4. Amazon DynamoDB - It is a fast, fully managed NoSQL key-value store provided by AWS. It supports features like automatic scaling, built-in security, and seamless integration with other AWS services.
+==================================================
+Question: How does the AVL tree maintain balance?
+Response:
+
+The AVL tree is a self-balancing tree data structure that maintains balance by adjusting its height and rebalancing the tree when necessary. The AVL tree uses a height value to keep track of the height of each node in the tree. When a node's left or right child is inserted, the height of the parent node may change. If the height difference between the left and right children becomes too large (more than one), the tree must be rebalanced.
+
+When the tree needs to be rebalanced, the algorithm performs a series of rotations on nodes until the tree is balanced again. The exact set of rotations will depend on which side of the root node the unbalanced child is located. If the unbalanced child is on the left side, the algorithm will perform a single rotation or a double rotation (two single rotations) to balance the tree. If the unbalanced child is on the right side, the algorithm will perform a similar set of rotations, but with left and right swaps instead of up-down swaps.
+
+Once the tree has been rebalanced, the height of each node is recalculated, and the process repeats as necessary. This ensures that the AVL tree always maintains balance and provides efficient access to data.
+==================================================

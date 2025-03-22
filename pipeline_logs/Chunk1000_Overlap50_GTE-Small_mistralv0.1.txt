@@ -1,0 +1,31 @@
+Question: What is the purpose of data replication?
+Response:
+
+Data replication in Redis is used to ensure data availability and durability, as well as improve performance by allowing multiple instances of a Redis cluster to share the same data. In this case, data replication would be used to ensure that Ollama's embeddings are available and can be used for similarity search on all instances of the Redis cluster.
+
+Similarly, vector databases like Elasticsearch or Faiss use data replication to ensure data availability and durability, as well as improve performance by allowing multiple instances of the database to share the same data. In this case, vector databases would be used to store Ollama's embeddings for similarity search.
+
+Overall, data replication is an important technique for ensuring that data is available and can be accessed quickly on multiple instances of a system.
+==================================================
+Question: Explain key-value databases with examples.
+Response:
+Key-Value databases are NoSQL databases that store data in a key-value pair format. The key is used to access the corresponding value in the database. This type of database allows for simple and fast storage and retrieval of data, making it ideal for use cases such as caching and storing small amounts of frequently accessed data.
+
+Examples of Key-Value databases include:
+
+1. Redis: An open-source, in-memory key-value store that supports data types such as strings, hashes, lists, sets, and sorted sets. It is commonly used for caching, storing session data, and implementing message queues.
+2. LevelDB: A fast and scalable key-value database that uses a log-structured merge tree to store data on disk. It is commonly used as a backend for other applications that require fast read and write access to data.
+3. Riak: A highly available, distributed key-value database that supports multiple data types and provides built-in support for consistent hashing. It is commonly used for storing large amounts of data that needs to be accessed quickly and efficiently.
+==================================================
+Question: How does the AVL tree maintain balance?
+Response:
+An AVL (Adelson-Velsky and Landis) tree is a self-balancing binary search tree that maintains balance by adjusting its height after each insertion or deletion operation. The key to maintaining balance in an AVL tree is to ensure that the height of the left and right subtrees of any node differ by at most one.
+
+When a new element is inserted into the AVL tree, the algorithm recursively searches for the appropriate location to insert the element based on its value. During this search, the algorithm maintains a count of the number of nodes that have been traversed (called the "path length"). If the path length exceeds a certain threshold (usually 2), the algorithm performs a height update operation to balance the tree.
+
+The height update operation involves adjusting the heights of the affected nodes in the tree. For example, if the new element is inserted on the left side of a node, the algorithm increments the count of that node's left subtree by 1 and decrements the count of its right subtree by 1. If the height of the left subtree is greater than or equal to the height of the right subtree plus one, the algorithm adjusts the heights of the affected nodes to maintain balance.
+
+Similarly, if an element is deleted from the AVL tree, the algorithm performs a similar height update operation to maintain balance.
+
+Overall, the AVL tree uses a combination of path length counting and height updates to maintain balance and ensure efficient search times in a self-balancing binary search tree.
+==================================================

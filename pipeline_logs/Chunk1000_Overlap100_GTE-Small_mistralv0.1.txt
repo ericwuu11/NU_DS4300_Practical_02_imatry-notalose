@@ -1,0 +1,22 @@
+Question: What is the purpose of data replication?
+Response:
+Data replication is a technique used in Redis to maintain multiple copies of the same data across different nodes or servers. The purpose of data replication is to ensure that the data is always available and accessible, even if one of the nodes fails or experiences an outage. By replicating the data, Redis can continue to serve requests without interruption, providing improved performance, reliability, and scalability. Additionally, data replication can also be used for load balancing and disaster recovery purposes.
+==================================================
+Question: Explain key-value databases with examples.
+Response:
+Key-Value Databases are a type of NoSQL database where data is stored as a set of key-value pairs. Each key uniquely identifies a piece of data, and the value can be anything from a simple string to a complex data structure. This makes Key-Value databases very fast at retrieving specific pieces of data.
+
+Examples of Key-Value Databases include:
+
+1. Redis: A popular open-source in-memory key-value database that is used for caching, storing session data, and real-time analytics. It is widely used by companies like Netflix, Twitter, and Airbnb for their high performance needs.
+2. Amazon DynamoDB: A fully managed NoSQL database service provided by AWS that can be used as a key-value store. It provides fast and predictable performance with seamless scalability.
+3. Riak: Another open-source key-value database that is designed for high availability, fault tolerance, and scalability. It has been used in production environments for mission-critical applications such as financial systems and gaming platforms.
+==================================================
+Question: How does the AVL tree maintain balance?
+Response:
+AVL trees are a type of balanced binary search tree that is commonly used to store data in a way that allows for efficient searching and insertion. They maintain balance by performing regular height calculations on each node in the tree. When a node's height becomes greater than or equal to two, it means the node is considered "unbalanced". In this case, the tree will undergo a restructuring process called a rotation, which is used to restore balance to the tree.
+
+There are two types of rotations that can be performed in an AVL tree: single-rotation and double-rotation. A single-rotation involves swapping the left child of a node with its parent, while a double-rotation involves swapping the left child of a node with the right child of its parent's right child. The height of each node is updated after a rotation to ensure that the tree remains balanced.
+
+It's worth noting that AVL trees are not the only type of balanced binary search trees, but they are known for their ability to maintain balance in constant time, making them a good choice for applications where efficient searching and insertion is required.
+==================================================

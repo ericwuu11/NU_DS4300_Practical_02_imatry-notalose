@@ -1,0 +1,29 @@
+Question: What is the purpose of data replication?
+Response:
+Data replication serves several purposes in various contexts, including in Redis and vector databases used for similarity search. In a Redis environment, data replication ensures that data is stored on multiple servers to increase availability, reduce latency, and improve scalability. This allows for better performance and fault tolerance, as users can access the data from any server in case one goes down or becomes overloaded.
+
+Similarly, in vector databases used for similarity search, data replication ensures that embeddings are stored on multiple servers, allowing for efficient querying of similar items across different locations. This is particularly useful when the size of the dataset increases and becomes too large to fit into a single server's memory, as distributing the data among multiple servers can improve search performance.
+
+In both Redis and vector databases, data replication helps maintain consistency, as changes made to one copy of the data are automatically propagated to other copies. This ensures that all users see the same data at any given time, regardless of where they are accessing it from. Overall, data replication plays a crucial role in ensuring high availability, scalability, and performance for Redis and vector databases used for similarity search applications.
+==================================================
+Question: Explain key-value databases with examples.
+Response:
+Key-Value Databases are a type of NoSQL database that stores data as key-value pairs. In this model, each piece of data is stored as an associative array where the keys represent unique identifiers for the values and vice versa. 
+
+Here are some examples of key-value databases:
+1. Redis - It's a popular in-memory key-value database that can be used to store data structures like lists, sets, queues, hashes, sorted sets, etc. 
+2. Riak - A distributed key-value database that can scale horizontally and provides features like ACID transactions, sharding, and replication.
+3. Memcached - An in-memory key-value store that acts as a distributed caching system to improve the performance of web applications. 
+4. Cassandra - A distributed key-value database designed for high availability and scalability, used for handling large amounts of data across multiple commodity servers.
+5. LevelDB - A fast key-value database that is designed for high performance and low latency, often used as a storage backend for other applications. 
+
+Key-Value Databases are widely used because of their simplicity, scalability, and performance. They are particularly useful when you need to store large amounts of structured or unstructured data and need to access it quickly.
+==================================================
+Question: How does the AVL tree maintain balance?
+Response:
+AVL trees are self-balancing binary search trees, which means that they automatically adjust their structure to ensure that the height of the left and right subtrees of any node differ by at most one. This is achieved by maintaining a balance factor for each node in the tree, which is calculated as the difference between the heights of the left and right subtrees divided by the height of the node itself.
+
+Whenever an insertion or deletion operation is performed on the AVL tree, the balance factor of the affected nodes may be disrupted. In this case, the tree will rebalance itself by performing a series of rotation operations that move nodes and adjust their balance factors until the tree is back in balance. The exact process for rebalancing an AVL tree can be complex, but generally involves finding the node(s) that need to be adjusted and then performing a sequence of rotations to restore balance.
+
+Overall, the self-balancing property of AVL trees makes them well-suited for use in applications where fast search and efficient insertion/deletion are important, such as in Redis and Ollama.
+==================================================

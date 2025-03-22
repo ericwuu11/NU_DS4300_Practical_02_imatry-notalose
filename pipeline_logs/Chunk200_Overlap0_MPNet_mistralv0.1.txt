@@ -1,0 +1,38 @@
+Question: What is the purpose of data replication?
+Response:
+
+Data replication refers to the practice of copying and maintaining multiple copies of a dataset across different servers, systems, or locations. The purpose of data replication in Redis is to increase availability and resilience by ensuring that data remains accessible even if one or more replicas fail. In addition, replication can also improve performance by allowing read operations to be distributed among the replicas, reducing the load on any single server.
+
+In a vector database context, data replication can be used to distribute the storage and processing of embeddings across multiple nodes, which can improve the efficiency and scalability of similarity search operations. This is particularly useful for large-scale RAG applications where the volume of data and the number of queries can be very high.
+
+In summary, data replication is an important technique for ensuring availability, improving performance, and enhancing the scalability of Redis and vector databases in a variety of applications, including RAG applications that use Ollama to generate embeddings.
+==================================================
+Question: Explain key-value databases with examples.
+Response:
+Key-value databases, also known as dictionary or associative databases, are a type of database that store data using key-value pairs. Each key is associated with a value, and these key-value pairs can be accessed in constant time (O(1)) on average. This makes them ideal for storing and retrieving small amounts of data quickly.
+
+Here are some examples of key-value databases:
+
+1. Redis: A popular, open-source key-value store that is used for caching, storing session data, and other use cases where fast access to data is important.
+2. Riak: A distributed, highly available key-value store that is designed for high performance and low latency. It uses a distributed architecture to provide fault tolerance and scalability.
+3. Couchbase: A NoSQL database that combines the benefits of both document-oriented and key-value databases. It allows you to store and retrieve data in both structured and unstructured formats, making it useful for a variety of use cases.
+4. LevelDB: A fast, open-source key-value store that is designed for high write performance. It is commonly used as the backing store for other applications that require fast access to data.
+
+Overall, key-value databases are a simple and efficient way to store and retrieve small amounts of data quickly. They are widely used in a variety of applications, from caching and session management to content delivery networks and search engines.
+==================================================
+Question: How does the AVL tree maintain balance?
+Response:
+
+The AVL tree is a self-balancing tree data structure that maintains balance by adjusting the heights of its nodes based on their children's heights. When a node has two children, the height of the node is calculated as the maximum of its children's heights plus one. When a node has no children or only one child, the height of the node is simply equal to 0.
+
+When an insertion operation is performed on an AVL tree, the node where the new key should be inserted is found by traversing down the tree based on the key value. If the new key's parent node has two children and the newly inserted child node is in the middle of its parent's subtree, then no balance adjustment is necessary as the subtree is already balanced.
+
+However, if the new key's parent node has only one child or two children but the newly inserted child node is not in the middle of its parent's subtree, then a balance adjustment is necessary. The AVL tree algorithm performs the following steps to maintain balance:
+
+1. Calculate the heights of the nodes affected by the insertion.
+2. Check if the new node should be rotated to the left (LL), right (RR), or both (LR) its parent node. This is done based on the difference in heights between the parent and child nodes.
+3. Rotate the nodes as necessary to maintain balance.
+4. Repeat steps 1-3 until no further adjustments are needed.
+
+By performing these operations, the AVL tree algorithm ensures that the tree remains balanced after insertions, which allows for efficient searching and lookup of keys in the tree.
+==================================================
