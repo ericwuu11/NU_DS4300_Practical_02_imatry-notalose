@@ -1,4 +1,4 @@
 ,Indexing Time (s),Query Time (s),Memory Usage (MB)
-Redis,0.353,0.008,2.484
-Chroma,27.217,0.049,9.777
-FAISS,0.0,0.032,1.512
+Redis,0.259,0.003,0.863
+Chroma,23.585,0.036,7.512
+FAISS,0.007,0.017,1.512
