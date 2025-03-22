@@ -9,11 +9,11 @@ This project involves building a local Retrieval-Augmented Generation (RAG) syst
 - **Performance Analysis:** Compare different configurations and evaluate retrieval accuracy, speed, and efficiency.
 
 # Execution
-Install the Process_Embed_and_VectorDB.py and Systems_and_LLM.py files and store them in a folder. Within the same folder, create another folder called "Corpus." Download from our "Corpus" folder the five notes:
+Install the "Process_Embed_and_VectorDB.py," "Systems_and_LLM.py," and "automated_pipeline.py" files and store them in a folder. Within the same folder, create another folder called "Corpus." Download from our "Corpus" folder the five notes:
 - "02 - Foundations"
 - "03 - Moving Beyond the Relational Model"
 - "04 - Data Replication"
 - "05 - NoSQL Intro + KV DBs"
 - "ICS 46 Spring 2022, Notes and Examples_ AVL Trees"
 
-Run both .py files in PyCharm, and ask any question you would like to the Systems_and_LLM.py file. This process will take some time so give it around 10-15 minutes. Once you are done prompting the LLM your questions, type 'exit' to leave the LLM.
+Run both the "automated_pipeline.py" file, and ensure that you change the file paths to where your five notes are being stored. Following this adjust the user questions to whatever you wish, then proceed to run the code. You should get a new folder called "pipeline_logs" where all the answers to your questions and answers are stored. In the terminal you should see a list of all the processing times and memory used to run the variations of chunking strategies, embedding models, choice of Vector DB, and choice of LLMs. This process will take some time so be patient! The "Process_Embed_and_VectorDB.py" and "Systems_and_LLM.py" files are needed for the "automated_pipeline.py" to run, but are also a testing grounds of sorts if you want to run a few trials or tests, but do not want to run the whole pipeline. Thanks and happy testing!
