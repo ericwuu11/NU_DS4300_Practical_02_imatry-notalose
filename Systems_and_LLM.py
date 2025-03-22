@@ -26,7 +26,6 @@ def get_embedding(text: str, model: str = "nomic-embed-text") -> list:
     response = ollama.embeddings(model=model, prompt=text)
     return response["embedding"]
 
-
 # Storing embedding in Redis
 def store_embedding(doc_id: str, text: str, embedding: list):
     key = f"{DOC_PREFIX}{doc_id}"
@@ -37,7 +36,6 @@ def store_embedding(doc_id: str, text: str, embedding: list):
             "embedding": np.array(embedding, dtype=np.float32).tobytes(),
         },
     )
-
 
 # Function to retrieve most similar documents from Redis
 def retrieve_similar_documents(query_text):
@@ -57,7 +55,6 @@ def retrieve_similar_documents(query_text):
     retrieved_docs = [doc.text for doc in res.docs]
     return retrieved_docs
 
-
 # Function to query a local LLM
 def query_local_llm(model_name, query_text, retrieved_docs):
     context = "\n".join(retrieved_docs)
@@ -68,7 +65,6 @@ def query_local_llm(model_name, query_text, retrieved_docs):
         messages=[{"role": "user", "content": formatted_query}]
     )
     return response["message"]
-
 
 # Main loop for user interaction
 if __name__ == "__main__":
@@ -103,9 +99,9 @@ if __name__ == "__main__":
             print(f"- {doc}")
 
         # Getting Llama 2 response
-        print("\nLlama 2 7B Response:")
-        print(query_local_llm("llama2", query_text, retrieved_docs))
+        print("\nLlama 3 Response:")
+        print(query_local_llm("llama3.2:1b", query_text, retrieved_docs))
 
         # Getting Mistral response
-        print("\nMistral 7B Response:")
-        print(query_local_llm("mistral", query_text, retrieved_docs))
+        print("\nMistral Response:")
+        print(query_local_llm("mistral:v0.1", query_text, retrieved_docs))

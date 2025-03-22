@@ -27,11 +27,9 @@ file_paths = [
     os.path.join(corpus_dir, "ICS 46 Spring 2022, Notes and Examples_ AVL Trees.pdf")
 ]
 
-
 # Function to measure current memory usage in MB
 def get_memory_usage():
     return psutil.Process().memory_info().rss / (1024 * 1024)
-
 
 # Function to clean text by converting to lowercase, removing extra spaces, and removing punctuation
 def clean_text(text):
@@ -39,7 +37,6 @@ def clean_text(text):
     text = re.sub(r'\s+', ' ', text)
     text = re.sub(r'[^\w\s]', '', text)
     return text.strip()
-
 
 # Function to split text into overlapping chunks of specified sizes
 def chunk_text(text, chunk_size, overlap_size):
@@ -49,7 +46,6 @@ def chunk_text(text, chunk_size, overlap_size):
         chunk = tokens[i:i + chunk_size]
         chunks.append(" ".join(chunk))
     return chunks
-
 
 # Function to extract text from multiple files
 def extract_text_from_files(file_paths):
@@ -67,7 +63,6 @@ def extract_text_from_files(file_paths):
             all_text += extract_text(path) + " "
 
     return clean_text(all_text)
-
 
 # Function to extract, clean, chunk, and save text to a CSV file
 def process_and_chunk_text():
@@ -87,7 +82,6 @@ def process_and_chunk_text():
     df_chunks = pd.DataFrame.from_dict(chunk_results, orient="index").transpose()
     df_chunks.to_csv(chunked_text_file, index=False)
 
-
 # Function to generate and compare embeddings using different models
 def generate_embeddings():
     # Handling missing values
@@ -99,7 +93,7 @@ def generate_embeddings():
     models = {
         "MiniLM": "sentence-transformers/all-MiniLM-L6-v2",
         "MPNet": "sentence-transformers/all-mpnet-base-v2",
-        "InstructorXL": "hkunlp/instructor-xl"
+        "GTE-Small": "thenlper/gte-small"
     }
 
     embedding_results = {}
@@ -112,7 +106,7 @@ def generate_embeddings():
         start_memory = get_memory_usage()
 
         try:
-            embeddings = model.encode(chunks, convert_to_numpy=True)
+            embeddings = model.encode(chunks, convert_to_numpy=True, batch_size=4)
         except Exception as e:
             print(f"Error while encoding with {model_name}: {e}")
             continue
